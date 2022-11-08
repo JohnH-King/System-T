@@ -20,4 +20,11 @@
   <ItemGroup>
     <None Remove="MessagePackAnalyzer" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".well-known\" />
+    <Folder Include=".well-known\pki-validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".well-known\pki-validation\70EC9EB097757EDA24C2E01501BC261D.txt" />
+  </ItemGroup>
 </Project>
