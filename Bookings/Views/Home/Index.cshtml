@@ -2,7 +2,39 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="LandingPage" id="LandingPage">
+    <div class="header">
+
+        <!--Content before waves-->
+        <div class="inner-header flex">
+            <label class="travelHeading">Travel</label>
+            <label class="travelSubHeading">Government Bookings</label>
+            <a class="BookNowButton" asp-controller="Logins"><label>Book now</label></a>
+            <img src="https://drive.google.com/uc?export=view&id=1x5G3QlFiKOilOauob2DrqPoNCe5DM78z" alt="Planeimage" class="Planeimage">
+            <i class="fa fa-chevron-down" aria-hidden="true" id="goDown" onclick="ScrollDown()" title="Go Down"></i>
+        </div>
+
+        <!--Waves Container-->
+        <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+        </div>
+        <!--Waves end-->
+
+    </div>
+    <!--Header ends-->
+
+    <!--Content starts-->
+    <div class="content flex"></div>
+    <!--Content ends-->
 </div>
