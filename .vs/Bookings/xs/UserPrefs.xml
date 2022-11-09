@@ -1,4 +1,43 @@
 ﻿<Properties StartupConfiguration="{4F59CEB5-FDA9-4516-8BE0-8E91585F32A1}|Default">
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Bookings PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bookings/Program.cs">
+    <Files>
+      <File FileName="Bookings/Controllers/LoginsController.cs" Line="31" Column="14" />
+      <File FileName="Bookings/Models/Login.cs" Line="1" Column="1" />
+      <File FileName="Bookings/Views/Logins/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Bookings/Views/Logins/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Bookings/Views/Logins/Index.cshtml" Line="16" Column="37" />
+      <File FileName="Bookings/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Bookings/appsettings.json" Line="1" Column="1" />
+      <File FileName="Bookings/Program.cs" Line="25" Column="24" />
+      <File FileName="Bookings/Properties/PublishProfiles/SystemT - Zip Deploy.pubxml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bookings" expanded="True">
+            <Node name="Bookings" expanded="True">
+              <Node name=".well-known" expanded="True">
+                <Node name="pki-validation" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name=".well-known" expanded="True">
+                  <Node name="acme-challenge" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

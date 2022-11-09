@@ -23,8 +23,11 @@
   <ItemGroup>
     <Folder Include=".well-known\" />
     <Folder Include=".well-known\pki-validation\" />
+    <Folder Include="wwwroot\.well-known\" />
+    <Folder Include="wwwroot\.well-known\acme-challenge\" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".well-known\pki-validation\70EC9EB097757EDA24C2E01501BC261D.txt" />
+    <None Include="wwwroot\.well-known\acme-challenge\GH19iLHDUxtZOwBgtJ0AigDMTKuJvbmhtnnn_hdbECM" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U/aNNgB56W3eCk/K1T2qfcpaBUdsKYtnJbgWvwGpZGA=",
+  "Hash": "Kc6i2APds4RcW63JTk3flZd3ZRkXEgqip5Bc0YRQiOo=",
   "Source": "Bookings",
   "BasePath": "_content/Bookings",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/obj/Debug/net6.0/scopedcss/projectbundle/Bookings.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/.DS_Store",
+      "SourceId": "Bookings",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
+      "BasePath": "_content/Bookings",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/css/site.css",
