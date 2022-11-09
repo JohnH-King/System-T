@@ -90,3 +90,13 @@ img{
   height: 8vh;
 }
 
+.dropdown-menu{
+  background: #00547D !important;
+}
+
+.account{
+  position: relative;
+  top: -6px;
+  left: 59%;
+}
+

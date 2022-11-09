@@ -28,3 +28,7 @@ function HidePasword(){
     document.getElementById("Hidepassword1").style.display = "none";
     document.getElementById("passwordLogin").type = "password";
 } 
+
+function Test(){
+    alert("test");
+}

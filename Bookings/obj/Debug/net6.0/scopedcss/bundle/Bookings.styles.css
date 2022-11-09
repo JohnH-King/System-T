@@ -91,3 +91,13 @@ img[b-usqizuanne]{
   height: 8vh;
 }
 
+.dropdown-menu[b-usqizuanne]{
+  background: #00547D !important;
+}
+
+.account[b-usqizuanne]{
+  position: relative;
+  top: -6px;
+  left: 59%;
+}
+
