@@ -46,3 +46,57 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+#preloader{
+  background: #F3F2F3 url(https://www.airlinesadviser.com/wp-content/themes/airlinesadviser/images/loader.gif) no-repeat center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* preloader*/
+iframe{
+display: none;
+}
+
+
+.navbar{
+  background: #00547D !important;
+}
+.container-fluid{
+  position: relative !important;
+}
+
+.navbar-toggler{
+  border: none;
+  color: white;
+  position: relative !important;
+  left: -5% !important;
+}
+.navbar-nav.flex-grow-1{
+  position: relative !important;
+}
+
+img{
+  position: relative !important;
+  top: 0%;
+  width: auto;
+  height: 8vh;
+}
+
+.dropdown-menu{
+  background: #00547D !important;
+}
+
+.account{
+  position: relative;
+  top: -6px;
+  left: 59%;
+}
+
