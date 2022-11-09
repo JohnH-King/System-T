@@ -5,7 +5,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: none;
-    width: 370px;
+    width: 30%;
     height: 100px;
     align-items: center;
 }
@@ -26,7 +26,7 @@
     border: 0.2px solid rgba(0, 36, 119, 0.581);
     border-radius:  0.5vmax;
     color: white;
-    font-size: 1vmax;
+    font-size: 16px;
     font-family: 'Montserrat';
     font-weight: 600;
     text-align: center;
@@ -52,7 +52,7 @@
     border: 0.2px solid rgba(0, 36, 119, 0.581);
     border-radius:  0.5vmax;
     color: white;
-    font-size: 1vmax;
+    font-size: 16px;
     font-family: 'Montserrat';
     font-weight: 600;
     text-align: center;
@@ -61,6 +61,10 @@
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19) ;
     background:rgba(0, 36, 119, 0.56); 
     color: rgba(255, 255, 255, 0.763);
+}
+.Link{
+    color: #c6c6c6;
+    font-weight: 800;
 }
 
 .FormLabel{
@@ -346,3 +350,28 @@
     fill: rgba(0, 119, 135, 0.108);
 }
 
+#ViewPassword1{
+    position: absolute;
+    left: 73%;
+    top:68%;
+    transform: translate(-73%, -68%);
+    z-index: 90;
+    color: rgba(134, 134, 134, 0.781);
+    font-size: 1.35vmax;
+}
+#ViewPassword1:hover{
+    color: #00547D;
+}
+#Hidepassword1{
+    position: absolute;
+    left: 73.05%;
+    top:68%;
+    transform: translate(-73.05%, -68%);
+    z-index: 90;
+    color: rgba(134, 134, 134, 0.781);
+    font-size: 1.35vmax;
+    display: none;
+}
+#Hidepassword1:hover{
+    color: #00547D;
+}

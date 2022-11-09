@@ -143,3 +143,29 @@
     color: rgba(255, 255, 255, 0.685);
     text-decoration: underline;
 }
+
+#ViewPasswordSignup{
+    position: absolute;
+    left: 73%;
+    top:61%;
+    transform: translate(-73%, -68%);
+    z-index: 90;
+    color: rgba(134, 134, 134, 0.781);
+    font-size: 1.35vmax;
+}
+#ViewPasswordSignup:hover{
+    color: #00547D;
+}
+#HidepasswordSignup{
+    position: absolute;
+    left: 73.05%;
+    top:61%;
+    transform: translate(-73.05%, -68%);
+    z-index: 90;
+    color: rgba(134, 134, 134, 0.781);
+    font-size: 1.35vmax;
+    display: none;
+}
+#HidepasswordSignup:hover{
+    color: #00547D;
+}

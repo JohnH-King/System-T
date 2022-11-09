@@ -69,19 +69,23 @@ display: none;
 .navbar[b-usqizuanne]{
   background: #00547D !important;
 }
-.nav-link:hover[b-usqizuanne]{
-  color: #00547D !important;
-  text-decoration: underline !important;
+.container-fluid[b-usqizuanne]{
+  position: relative !important;
 }
 
 .navbar-toggler[b-usqizuanne]{
   border: none;
   color: white;
+  position: relative !important;
+  left: -5% !important;
+}
+.navbar-nav.flex-grow-1[b-usqizuanne]{
+  position: relative !important;
 }
 
 img[b-usqizuanne]{
-  position: relative;
-  top: -25%;
+  position: relative !important;
+  top: 0%;
   width: auto;
   height: 8vh;
 }

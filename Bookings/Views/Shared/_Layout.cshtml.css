@@ -69,19 +69,23 @@ display: none;
 .navbar{
   background: #00547D !important;
 }
-.nav-link:hover{
-  color: #00547D !important;
-  text-decoration: underline !important;
+.container-fluid{
+  position: relative !important;
 }
 
 .navbar-toggler{
   border: none;
   color: white;
+  position: relative !important;
+  left: -5% !important;
+}
+.navbar-nav.flex-grow-1{
+  position: relative !important;
 }
 
 img{
-  position: relative;
-  top: -25%;
+  position: relative !important;
+  top: 0%;
   width: auto;
   height: 8vh;
 }
