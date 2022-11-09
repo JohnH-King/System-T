@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QjvD7zQm4OizwE/n6NTiWQlRQWVdud7XX9W+En9YG4Y=",
+  "Hash": "84ADw8qEfpjLzk/yXTBUXEeKsMMXoyr7NJPUB7SASQ4=",
   "Source": "Bookings",
   "BasePath": "_content/Bookings",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\LoginPage.css"
+    },
+    {
+      "Identity": "C:\\Test\\System-T\\Bookings\\wwwroot\\css\\Signup.css",
+      "SourceId": "Bookings",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Test\\System-T\\Bookings\\wwwroot\\",
+      "BasePath": "_content/Bookings",
+      "RelativePath": "css/Signup.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Signup.css"
     },
     {
       "Identity": "C:\\Test\\System-T\\Bookings\\wwwroot\\css\\site.css",
