@@ -20,4 +20,10 @@
   <ItemGroup>
     <None Remove="MessagePackAnalyzer" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
 </Project>
