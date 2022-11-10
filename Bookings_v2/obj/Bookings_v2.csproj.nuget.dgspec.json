@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj": {}
+    "/Users/eduannaude/Documents/GitHub/System-T/Bookings_v2/Bookings_v2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj": {
+    "/Users/eduannaude/Documents/GitHub/System-T/Bookings_v2/Bookings_v2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj",
+        "projectUniqueName": "/Users/eduannaude/Documents/GitHub/System-T/Bookings_v2/Bookings_v2.csproj",
         "projectName": "Bookings_v2",
-        "projectPath": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj",
-        "packagesPath": "C:\\Users\\janco\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\obj\\",
+        "projectPath": "/Users/eduannaude/Documents/GitHub/System-T/Bookings_v2/Bookings_v2.csproj",
+        "packagesPath": "/Users/eduannaude/.nuget/packages/",
+        "outputPath": "/Users/eduannaude/Documents/GitHub/System-T/Bookings_v2/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\janco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/eduannaude/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -80,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }

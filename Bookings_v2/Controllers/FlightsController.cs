@@ -58,6 +58,7 @@ namespace Bookings.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FlightId,OneWay,DepartureDate,ReturnDate,StartLocation,EndLocation,Cost,ImageId")] Flight flight)
         {
+            flight.UserId = User.Identity.Name.ToString();
             if (ModelState.IsValid)
             {
                 _context.Add(flight);
