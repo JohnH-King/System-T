@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Bookings_v2.Models.Transport>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+       
+<link href="~wwwroot/css/Transport.css" rel="stylesheet" />
+</head>
+<h1>Book your Transport</h1>
+<body>
+    <div class="form-group">
+        <a onclick="window.location.href = 'https://auth.uber.com/v2/?breeze_local_zone=dca11&next_url=https%3A%2F%2Fm.uber.com%2F&state=y6snlnd1iuaUq3ccVsJc59EhgBJxla502MPUv1o9mf8%3D';">
+            <input style="background-image: url(/Images/Uber.png);background-size: 70px 70px; background-repeat: no-repeat;background-position: center;" class="ButtonUber btn btn-primary img" />
+        </a>
+</div>
+
+<div class="form-group">
+    <a onclick="window.location.href = 'https://bolt.eu/?utm_source=googleadwords_int&utm_medium=cpc&utm_campaign=za_brand_search&utm_source=google&utm_medium=ads&utm_campaign=9600998124&gclid=Cj0KCQiA37KbBhDgARIsAIzce14mKtHBQZnWnP2ZSoYGuJVUiJEJw72QBzxP7y8GxGE8WjcplzavtxsaAi3sEALw_wcB';">
+            <input type="button" style="background-image: url(/Images/Bolt.png);background-size: 70px 70px; background-repeat: no-repeat;background-position: center;" class="ButtonBolt btn btn-primary img" />
+    </a>
+</div>
+<div class="form-group">
+    <a onclick="window.location.href = 'http://ride.yoonet.co.za/';">
+            <input type="button" style="background-image: url(/Images/Yookoo.png);background-size: 70px 70px; background-repeat: no-repeat;background-position: center;" class="ButtonYookoo btn btn-primary img" />
+    </a>
+</div>
+</body>
+
