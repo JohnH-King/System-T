@@ -5,39 +5,115 @@
     ViewData["ActivePage"] = ManageNavPages.Email;
 }
 
-<h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
 <div class="row">
     <div class="col-md-6">
+        <h3 class="SubHeadingSettings">@ViewData["Title"]</h3>
         <form id="email-form" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             @if (Model.IsEmailConfirmed)
             {
                 <div class="form-floating input-group">
-                    <input asp-for="Email" class="form-control" disabled />
+                    <input asp-for="Email" class="inputboxStyling form-control" disabled />
                         <div class="input-group-append">
                             <span class="h-100 input-group-text text-success font-weight-bold">✓</span>
                         </div>
-                    <label asp-for="Email" class="form-label"></label>
+                    <label asp-for="Email" class="inputLabel form-label"></label>
                 </div>
             }
             else
             {
                 <div class="form-floating">
-                    <input asp-for="Email" class="form-control" disabled />
-                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="inputboxStyling form-control" disabled />
+                    <label asp-for="Email" class="inputLabel form-label"></label>
                     <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                 </div>
             }
             <div class="form-floating">
-                <input asp-for="Input.NewEmail" class="form-control" autocomplete="email" aria-required="true" />
-                <label asp-for="Input.NewEmail" class="form-label"></label>
+                <input asp-for="Input.NewEmail" class="inputboxStyling form-control" autocomplete="email" aria-required="true" />
+                <label asp-for="Input.NewEmail" class="inputLabel form-label"></label>
                 <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
             </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="w-100 btn btn-lg btn-primary">Change email</button>
+            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="ManageAccountButton w-100 btn btn-lg btn-primary">Change email</button>
         </form>
     </div>
 </div>
+
+<style>
+    .row {
+        background: none;
+        align-content: center;
+    }
+
+    .col-md-6 {
+        background: none;
+        position: relative;
+        align-self: center;
+        left: -65%;
+        top: 0%;
+        transform: translate(65%, -0%);
+    }
+
+    .SubHeadingSettings {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-align: left;
+        position: relative;
+        margin-bottom: 2%;
+    }
+
+    .inputboxStyling {
+        position: relative;
+        color: #000000;
+        font-size: 1.2vmax;
+        font-family: 'Montserrat';
+        border: none;
+        border-radius: 0.5vmax;
+        opacity: 0.8;
+        margin-bottom: 10px;
+        background: rgba(162, 162, 162, 0.2) !important;
+    }
+
+    .inputLabel {
+        font-family: 'Montserrat';
+    }
+
+    .ManageAccountButton {
+        position: relative;
+        background: #00547D;
+        border: 0.2px solid #00547D;
+        border-radius: 0.5vmax;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+        .ManageAccountButton:hover {
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+            background: #00537d;
+            color: black;
+        }
+    .ManageAccountButton{
+        position: relative;
+        background: #00547D;
+        border: 0.2px solid #00547D;
+        border-radius: 0.5vmax;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .ManageAccountButton:hover{
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+            background: #00537d;
+            color: black;
+    }
+</style>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

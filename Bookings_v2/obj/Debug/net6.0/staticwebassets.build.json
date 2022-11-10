@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t703ZgsEsywh9bytGXdKcpVl4jVHiN6JAQxkgWur4N0=",
+  "Hash": "QxDa7xb1B5Fxf9iMr54TysCoWwWKX3aEejOCLxvB1eA=",
   "Source": "Bookings_v2",
   "BasePath": "_content/Bookings_v2",
   "Mode": "Default",
@@ -170,6 +170,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Bolt.png"
     },
     {
+      "Identity": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Bolt1.png",
+      "SourceId": "Bookings_v2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\",
+      "BasePath": "_content/Bookings_v2",
+      "RelativePath": "Images/Bolt1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Bolt1.png"
+    },
+    {
       "Identity": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Uber.png",
       "SourceId": "Bookings_v2",
       "SourceType": "Discovered",
@@ -219,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Yookoo.png"
+    },
+    {
+      "Identity": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Yookoo1.png",
+      "SourceId": "Bookings_v2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\",
+      "BasePath": "_content/Bookings_v2",
+      "RelativePath": "Images/Yookoo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Yookoo1.png"
     },
     {
       "Identity": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\js\\site.js",

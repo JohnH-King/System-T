@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Images\\Bolt.png"
     },
     {
+      "Id": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Bolt1.png",
+      "PackagePath": "staticwebassets\\Images\\Bolt1.png"
+    },
+    {
       "Id": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Uber-logo.png",
       "PackagePath": "staticwebassets\\Images\\Uber-logo.png"
     },
@@ -19,6 +23,10 @@
     {
       "Id": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Yookoo.png",
       "PackagePath": "staticwebassets\\Images\\Yookoo.png"
+    },
+    {
+      "Id": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\Images\\Yookoo1.png",
+      "PackagePath": "staticwebassets\\Images\\Yookoo1.png"
     },
     {
       "Id": "C:\\FrontEnd development\\System-T\\Bookings_v2\\wwwroot\\css\\LandingPage.css",
