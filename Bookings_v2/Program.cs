@@ -1,3 +1,4 @@
+using Bookings.Classes;
 using Bookings_v2.Data;
 using Bookings_v2.Models;
 using Microsoft.AspNetCore.Identity;
@@ -17,6 +18,9 @@ builder.Services.AddDbContext<SystemTContext>(options => options.UseSqlServer("S
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("TravelAPI", client => { client.BaseAddress = new Uri("https://test.api.amadeus.com"); });
+builder.Services.AddScoped<TravelAPI>();
 
 
 
