@@ -11,7 +11,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDbContext<SystemTContext>(options => options.UseSqlServer("Server=systemtise.csp1vikprmva.us-east-2.rds.amazonaws.com;Database=SystemT;User Id=admin;Password=SystemTTravel;Trusted_Connection=False"));
+builder.Services.AddDbContext<SystemTContext>(options => options.UseSqlServer("Server=systemtise.csp1vikprmva.us-east-2.rds.amazonaws.com;Database=SystemT;" +
+    "User Id=admin;Password=SystemTTravel;Trusted_Connection=False"));
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ApplicationDbContext>();

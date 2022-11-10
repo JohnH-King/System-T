@@ -1,0 +1,103 @@
+/* _content/Bookings_v2/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-zuxxpg9qvl] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-zuxxpg9qvl] {
+  color: #0077cc;
+}
+
+.btn-primary[b-zuxxpg9qvl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-zuxxpg9qvl], .nav-pills .show > .nav-link[b-zuxxpg9qvl] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-zuxxpg9qvl] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-zuxxpg9qvl] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-zuxxpg9qvl] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-zuxxpg9qvl] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-zuxxpg9qvl] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+
+#preloader[b-zuxxpg9qvl]{
+  background: #F3F2F3 url(https://www.airlinesadviser.com/wp-content/themes/airlinesadviser/images/loader.gif) no-repeat center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* preloader*/
+iframe[b-zuxxpg9qvl]{
+display: none;
+}
+
+
+.navbar[b-zuxxpg9qvl]{
+  background: #00547D !important;
+}
+.container-fluid[b-zuxxpg9qvl]{
+  position: relative !important;
+}
+
+.navbar-toggler[b-zuxxpg9qvl]{
+  border: none;
+  color: white;
+  position: relative !important;
+  left: -5% !important;
+}
+.navbar-nav.flex-grow-1[b-zuxxpg9qvl]{
+  position: relative !important;
+}
+
+img[b-zuxxpg9qvl]{
+  position: relative !important;
+  top: 0%;
+  width: auto;
+  height: 8vh;
+}
+
+.dropdown-menu[b-zuxxpg9qvl]{
+  background: #00547D !important;
+}
+
+.account[b-zuxxpg9qvl]{
+  position: relative;
+  top: -6px;
+  left: 59%;
+}
+
