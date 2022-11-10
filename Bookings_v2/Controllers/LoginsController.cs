@@ -171,7 +171,11 @@ namespace Bookings_v2.Controllers
                 var usr = _context.Logins.Single(u => u.Email == login.Email && u.Password == login.Password);
                 if (usr != null)
                 {
+<<<<<<< HEAD:Bookings_v2/Controllers/LoginsController.cs
                     return Redirect("/Bookings_v2/Index");
+=======
+                    return Redirect("/Bookings/Index");
+>>>>>>> main:Bookings/Controllers/LoginsController.cs
                 }
             }
             catch (Exception)
