@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj": {}
+    "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj": {}
   },
   "projects": {
-    "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj": {
+    "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj",
+        "projectUniqueName": "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj",
         "projectName": "Bookings_v2",
-        "projectPath": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj",
-        "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\obj\\",
+        "projectPath": "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj",
+        "packagesPath": "C:\\Users\\humai\\.nuget\\packages\\",
+        "outputPath": "C:\\FrontEnd development\\System-T\\Bookings_v2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\John\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\humai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -62,6 +57,10 @@
               "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.10, )"
             }
