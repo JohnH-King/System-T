@@ -4,62 +4,73 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Book your Transport</h1>
+<link href="~wwwroot/css/Transport.css" rel="stylesheet" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BookingId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TypeId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndLocation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cost)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BookingId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TypeId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndLocation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageId)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.TransportId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.TransportId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.TransportId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="form-group">
+    <input type="button" onclick="https://auth.uber.com/v2/?breeze_local_zone=dca11&next_url=https%3A%2F%2Fm.uber.com%2F&state=y6snlnd1iuaUq3ccVsJc59EhgBJxla502MPUv1o9mf8%3D" value="Uber" class="ButtonUber btn btn-primary" />
+</div>
+<div class="form-group">
+    <input type="button" value="Bolt" class="ButtonBolt btn btn-primary" />
+</div>
+<div class="form-group">
+    <input type="button" value="Yookoo Ride" class="ButtonYookoo btn btn-primary" />
+</div>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TypeId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndLocation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cost)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TransportId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.TransportId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TransportId">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
