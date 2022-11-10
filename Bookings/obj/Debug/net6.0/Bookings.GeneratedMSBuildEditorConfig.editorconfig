@@ -116,12 +116,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/coding stuff/LOCAL/System-T/Bookings/Views/Logins/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5zXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/coding stuff/LOCAL/System-T/Bookings/Views/Logins/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/coding stuff/LOCAL/System-T/Bookings/Views/Logins/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5zXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/coding stuff/LOCAL/System-T/Bookings/Views/Shared/Error.cshtml]

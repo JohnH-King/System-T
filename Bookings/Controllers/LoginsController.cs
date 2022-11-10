@@ -59,7 +59,7 @@ namespace Bookings.Controllers
             {
                 _context.Add(login);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Login));
             }
             return View(login);
         }
@@ -156,5 +156,34 @@ namespace Bookings.Controllers
         {
           return _context.Logins.Any(e => e.ClientLoginId == id);
         }
+
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login([Bind("Email,Password")] Login login)
+        {
+            try
+            {
+                var usr = _context.Logins.Single(u => u.Email == login.Email && u.Password == login.Password);
+                if (usr != null)
+                {
+                    return Redirect("/Bookings/Index");
+                }
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction(nameof(Login));
+            }
+
+            return RedirectToAction(nameof(Login));
+
+
+        }
+
     }
 }

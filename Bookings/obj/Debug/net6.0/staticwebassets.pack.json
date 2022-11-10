@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\Bookings.bundle.scp.css"
     },
     {
+      "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\Images\\Bolt.png",
+      "PackagePath": "staticwebassets\\Images\\Bolt.png"
+    },
+    {
+      "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\Images\\Uber-logo.png",
+      "PackagePath": "staticwebassets\\Images\\Uber-logo.png"
+    },
+    {
+      "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\Images\\Uber.png",
+      "PackagePath": "staticwebassets\\Images\\Uber.png"
+    },
+    {
+      "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\Images\\Yookoo.png",
+      "PackagePath": "staticwebassets\\Images\\Yookoo.png"
+    },
+    {
       "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\css\\LandingPage.css",
       "PackagePath": "staticwebassets\\css\\LandingPage.css"
     },
@@ -15,6 +31,10 @@
     {
       "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\css\\Signup.css",
       "PackagePath": "staticwebassets\\css\\Signup.css"
+    },
+    {
+      "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\css\\Transport.css",
+      "PackagePath": "staticwebassets\\css\\Transport.css"
     },
     {
       "Id": "E:\\coding stuff\\LOCAL\\System-T\\Bookings\\wwwroot\\css\\site.css",

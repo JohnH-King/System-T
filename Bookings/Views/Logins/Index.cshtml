@@ -23,15 +23,9 @@
         </svg>
     </div>
     <div class="options">
-        @foreach (var item in Model) {
-        <tr>
-            <td>
-                <a class="SigninButton" asp-action="Details" asp-route-id="@item.ClientLoginId">Already have an account? <u class="Link">Sign in</u> </a>
-            </td>
-        </tr>
-        }
-        <br>
-        <a class="SignupButton" asp-action="Create">Don't have an account? <u class="Link">Create account</u></a>
+
+         <a class="SigninButton" asp-action="Login">Already have an account? <u class="Link">Sign in</u> </a> 
+         <a class="SignupButton" asp-action="Create">Don't have an account? <u class="Link">Create account</u></a>
     </div>
     
    
