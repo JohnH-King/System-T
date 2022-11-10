@@ -47,10 +47,9 @@ namespace Bookings.Classes
         {
             FlightInformation flightInformation1 = flightInformation;
 
-            string ste = "v2/shopping/flight-offers?originLocationCode=" + flightInformation.OriginLocationCode + "&destinationLocationCode=" + flightInformation.DestinationLocationCode + "&departureDate=" + flightInformation.DepartureDate + "&returnDate=" + flightInformation.ReturnDate + "&adults=" + flightInformation.Adults + "&max=5";
+            string ste = "/v2/shopping/flight-offers?adults="+flightInformation.Adults+"&originLocationCode="+flightInformation.OriginLocationCode+"&destinationLocationCode="+flightInformation.DestinationLocationCode+"&departureDate="+flightInformation.DepartureDate+"&returnDate="+flightInformation.ReturnDate;
 
-            var message = new HttpRequestMessage(HttpMethod.Get,
-                $"/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2022-12-01&returnDate=2022-12-18&adults=2");
+            var message = new HttpRequestMessage(HttpMethod.Get,ste);
 
             ConfigBearerTokenHeader();
             var response = await http.SendAsync(message);
