@@ -5,6 +5,8 @@
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <i class="UserIcon fa fa-user-circle-o" aria-hidden="true"></i>
+    <label class="username"><b>Hello</b><br /> @User.Identity?.Name!</label>
     <ul class="nav nav-pills flex-column">
         <li class="listItem nav-item"><a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">Profile</a></li>
         <li class="nav-item"><a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">Email</a></li>
@@ -30,15 +32,36 @@
     }
 </script>
 <style>
+    .UserIcon{
+        color: #00547D;
+        z-index: 90;
+        font-size: 6vmax;
+        position: relative;
+        left: 42.7%;
+        opacity: 0.9;
+        top: -10%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+    }
+    .username{
+        color: rgb(46, 46, 46);
+        font-family: 'Montserrat';
+        position:relative;
+        top: -5%;
+        left: 50%;
+        transform: translate(-50%, 5%);
+        text-align: center;
+    }
     .MenuButtonOpen{
         position: absolute;
         top: 12%;
         left: 1%;
     }
     .nav-pills .nav-link.active {
-        background: rgb(117, 117, 117);
+        background: rgb(179, 179, 179);
         color: #FFFF;
         font-family: 'Montserrat';
+        border-radius: 0px;
     }
 
     .nav-pills .nav-link{
@@ -48,7 +71,7 @@
 
     .sidenav {
       height: 80%;
-      width: 0;
+      width: 300px;
       position: fixed;
       z-index: 1;
       top: 12%;
@@ -70,7 +93,7 @@
     }
 
     .sidenav a:hover {
-      color: #f1f1f1;
+                color: #8e8e8e;
     }
 
     .sidenav .closebtn {
@@ -79,6 +102,8 @@
       right: 25px;
       font-size: 36px;
       margin-left: 50px;
+            color: #00547D;
+    }
 
 
 </style>
