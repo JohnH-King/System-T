@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Bookings.Models;
+using Bookings.Classes;
+using Bookings.Models.FlightModels;
 using Bookings_v2.Models;
 
-namespace Bookings_v2.Controllers
+namespace Bookings.Controllers
 {
     public class FlightsController : Controller
     {
@@ -21,7 +24,7 @@ namespace Bookings_v2.Controllers
         // GET: Flights
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Flights.ToListAsync());
+            return View();
         }
 
         // GET: Flights/Details/5
@@ -147,14 +150,31 @@ namespace Bookings_v2.Controllers
             {
                 _context.Flights.Remove(flight);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool FlightExists(int id)
         {
-          return _context.Flights.Any(e => e.FlightId == id);
+            return _context.Flights.Any(e => e.FlightId == id);
+        }
+
+        // GET: Flights
+        public async Task<IActionResult> SearchFlights([Bind("OriginLocationCode,DestinationLocationCode,DepartureDate,ReturnDate,Adults")] FlightInformation flightInformation, [FromServices] TravelAPI api)
+        {
+            FlightInformation flightInformation1 = flightInformation;
+            await api.ConnectOAuth();
+            FlightPackages results = await api.SearchFlights(flightInformation1);
+            List<FlightsOffers> flights = new List<FlightsOffers>();
+            if (results.data != null)
+            {
+                flights = results.data;
+            }
+
+
+
+            return View(flights);
         }
     }
 }

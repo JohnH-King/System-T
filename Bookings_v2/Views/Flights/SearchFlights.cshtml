@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Bookings.Models.FlightModels.FlightsOffers>
+
+@{
+    ViewData["Title"] = "SearchFlights";
+}
+
+<h1>SearchFlights</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+
+@foreach (var item in Model)
+{
+        <div class="row h-100 bg-opacity-25 shadow p-3 mb-5 rounded-3">
+            <div class="mb-2 col">
+                <div style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <h5 class="card-title">Departure Journey | @item.itineraries[0].segments[0].departure.at.Substring(0,10)</h5>
+                        <div class="row align-items-center">
+                            <div class="col align-items-center">
+                                <div>
+                                    <label class="card-title">@item.itineraries[0].segments[0].departure.at.Substring(11,8)</label>
+                                </div>
+                                    <label class="card-title">@item.itineraries[0].segments[0].departure.iataCode</label>
+                            </div>
+                            <div class="col align-items-center">
+                                <div>
+                                    <label class="card-title">@item.itineraries[0].duration.Substring(2)</label>
+                                </div>
+                                <label class="card-title border-top">Stops: @item.itineraries[0].segments[0].numberOfStops</label>
+                            </div>
+                            <div class="col align-items-center">
+                                <div>
+                                    <label class="card-title">@item.itineraries[0].segments[0].arrival.at.Substring(11,8)</label>
+                                </div>
+                                <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-2 col">
+                <div style="backdrop-filter: blur(10px);">
+                    <div class="card-body">
+                        <h5 class="card-title" >Return Journey | @item.itineraries[1].segments[0].departure.at.Substring(0,10)</h5>
+                        <div class="row align-items-center">
+                            <div class="col align-items-center">
+                                <div>
+                                    <label class="card-title">@item.itineraries[1].segments[0].departure.at.Substring(11,8) </label>
+                                </div>
+                                <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode </label>
+                            </div>
+                            <div class="col flex-column">
+                                <div class="align-items-center">
+                                    <label class="card-title">@item.itineraries[1].duration.Substring(2)</label>
+                                </div>
+                                <div class="align-items-center">
+                                    <label class="card-title border-top">Stops: @item.itineraries[1].segments[0].numberOfStops</label>
+                                </div>
+                            </div>
+                            <div class="col flex-column">
+                                <div class="align-items-center">
+                                    <label class="card-title">@item.itineraries[1].segments[0].arrival.at.Substring(11,8)</label>
+                                </div>
+                                <div class="align-items-center">
+                                    <label class="card-title">@item.itineraries[0].segments[0].departure.iataCode</label>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <h5 class="card-title">TOTAL PRICE : R @item.price.total</h5>
+            <button type="submit" class="btn btn-primary w-25">Book now</button>
+        </div>
+
+                    
+}
