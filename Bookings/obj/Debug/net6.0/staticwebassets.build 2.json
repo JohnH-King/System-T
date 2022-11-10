@@ -1,10 +1,6 @@
 {
   "Version": 1,
-<<<<<<< Updated upstream
-  "Hash": "Kc6i2APds4RcW63JTk3flZd3ZRkXEgqip5Bc0YRQiOo=",
-=======
-  "Hash": "V1STVsnaWr0jgc28jWc9v1t9PPR5FMgZHIrNrq2LiPQ=",
->>>>>>> Stashed changes
+  "Hash": "57eu5zPL7EJmKO6RVWa9DUGsJaYL9NTO+EQgF7TRNPg=",
   "Source": "Bookings",
   "BasePath": "_content/Bookings",
   "Mode": "Default",
@@ -55,16 +51,12 @@
       "OriginalItemSpec": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/obj/Debug/net6.0/scopedcss/projectbundle/Bookings.bundle.scp.css"
     },
     {
-<<<<<<< Updated upstream
-      "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/.DS_Store",
-=======
       "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/css/LandingPage.css",
->>>>>>> Stashed changes
       "SourceId": "Bookings",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
       "BasePath": "_content/Bookings",
-      "RelativePath": ".DS_Store",
+      "RelativePath": "css/LandingPage.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -73,15 +65,6 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-<<<<<<< Updated upstream
-      "OriginalItemSpec": "wwwroot/.DS_Store"
-    },
-    {
-      "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/css/site.css",
-      "SourceId": "Bookings",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
-=======
       "OriginalItemSpec": "wwwroot/css/LandingPage.css"
     },
     {
@@ -123,7 +106,6 @@
       "SourceId": "Bookings",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
->>>>>>> Stashed changes
       "BasePath": "_content/Bookings",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -137,34 +119,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-<<<<<<< Updated upstream
       "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/favicon.ico",
       "SourceId": "Bookings",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
-=======
-      "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/css/Transport.css",
-      "SourceId": "Bookings",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
-      "BasePath": "_content/Bookings",
-      "RelativePath": "css/Transport.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/css/Transport.css"
-    },
-    {
-      "Identity": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/favicon.ico",
-      "SourceId": "Bookings",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/wwwroot/",
->>>>>>> Stashed changes
       "BasePath": "_content/Bookings",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
