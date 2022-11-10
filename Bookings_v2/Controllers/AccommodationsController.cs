@@ -53,7 +53,7 @@ namespace Bookings_v2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("AccommodationId,StartDate,EndDate,Bookings_v2,Location,Price,ImageId")] Accommodation accommodation)
+        public async Task<IActionResult> Create([Bind("AccommodationId,StartDate,EndDate,Bookings,Location,Price,ImageId")] Accommodation accommodation)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace Bookings_v2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AccommodationId,StartDate,EndDate,Bookings_v2,Location,Price,ImageId")] Accommodation accommodation)
+        public async Task<IActionResult> Edit(int id, [Bind("AccommodationId,StartDate,EndDate,Bookings,Location,Price,ImageId")] Accommodation accommodation)
         {
             if (id != accommodation.AccommodationId)
             {
