@@ -1,0 +1,204 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="SignInPage">
+    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-arrow-left" aria-hidden="true" id="BacklandingPage" title="Back"></i></a>
+    <div class="custom-shape-divider-top-1666703016">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="custom-shape-divider-top-1666703101">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="custom-shape-divider-top-1666703296">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <i class="fa fa-user-circle-o" aria-hidden="true" id="UserIcon"></i>
+        <h1 class="PageHeading">@ViewData["Title"]</h1>
+        <section>
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating">
+                    <input asp-for="Input.Email" class="inputboxStyling form-control" autocomplete="username" aria-required="true" />
+                    <label asp-for="Input.Email" class="form-label"></label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="form-floating">
+                    <input asp-for="Input.Password" class="inputboxStyling form-control" autocomplete="current-password" aria-required="true" />
+                    <label asp-for="Input.Password" class="form-label"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div>
+                    <div class="RememberMe checkbox">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="LoginButton w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div>
+                    <p>
+                        <a class="Links" id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a class="Links" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a class="Links" id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Use another service to log in.</h3>
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                                article
+                                about setting up this ASP.NET application to support logging in via external services
+                            </a>.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+<style>
+    .SignInPage {
+        display: block;
+        background: linear-gradient(60deg, rgb(0, 36, 119) 0%, rgb(0, 119, 135)100%);
+        width: 100%;
+        height: 100vh;
+    }
+
+    .row {
+        background: none;
+    }
+
+    .col-md-4 {
+        background: none;
+        align-self: center;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -0%);
+    }
+
+    #UserIcon {
+        z-index: 90;
+        color: rgb(255, 255, 255);
+        font-size: 8vmax;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        transform: translate(-0%, -0%);
+        opacity: 0.9;
+    }
+
+    .PageHeading {
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, -0%);
+        color: rgb(255, 255, 255);
+    }
+
+    .inputboxStyling {
+        position: relative;
+        color: #000000;
+        font-size: 1.2vmax;
+        font-family: 'Montserrat';
+        border: none;
+        border-radius: 0.5vmax;
+        box-shadow: 0 4px 8px 0 rgba(0, 36, 119, 0.192), 0 6px 20px 0 rgba(0, 36, 119, 0.115) inset;
+        opacity: 0.8;
+        margin-bottom: 10px;
+    }
+
+    .LoginButton {
+        position: relative;
+        background: rgba(0, 36, 119, 0.718);
+        border: 0.2px solid rgba(0, 36, 119, 0.581);
+        border-radius: 0.5vmax;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+        .LoginButton:hover {
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+            background: rgba(0, 36, 119, 0.56);
+            color: rgba(255, 255, 255, 0.763);
+        }
+
+    .RememberMe {
+        position: relative;
+        left: -50%;
+        transform: translate(20%, -0%);
+        color: rgb(255, 255, 255);
+        font-family: 'Montserrat';
+    }
+
+    .Links {
+        color: rgba(255, 255, 255, 0.685);
+        font-family: 'Montserrat';
+        text-decoration: none;
+        margin: none;
+    }
+
+        .Links:hover {
+            color: rgba(255, 255, 255, 0.685);
+            text-decoration: underline;
+        }
+
+    }
+    /* Hide the second column */
+    .col-md-6.col-md-offset-2 {
+        display: none;
+    }
+</style>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

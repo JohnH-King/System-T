@@ -1,0 +1,40 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+    else
+    {
+        Layout = "/Areas/Identity/Pages/_Layout.cshtml";
+    }
+}
+
+<h1 class="Heading"><b>Edit your account</b></h1>
+
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <partial name="_ManageNav" />
+        </div>
+        <div class="col-md-9">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+
+<style>
+    .SubHeadingSettings{
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-align: left;
+        position: relative;
+        margin-bottom: 2%;
+    }
+</style>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

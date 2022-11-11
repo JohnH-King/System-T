@@ -13,5 +13,6 @@ namespace Bookings_v2.Models
         public string? EndLocation { get; set; }
         public string? Cost { get; set; }
         public int? ImageId { get; set; }
+        public string? UserId { get; set; }
     }
 }
