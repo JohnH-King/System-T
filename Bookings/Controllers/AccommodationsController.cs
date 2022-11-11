@@ -21,19 +21,19 @@ namespace Bookings.Controllers
         // GET: Accommodations
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Accommodations.ToListAsync());
+              return View(await _context.Accomodations.ToListAsync());
         }
 
         // GET: Accommodations/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
-            if (id == null || _context.Accommodations == null)
+            if (id == null || _context.Accomodations == null)
             {
                 return NotFound();
             }
 
-            var accommodation = await _context.Accommodations
-                .FirstOrDefaultAsync(m => m.AccommodationId == id);
+            var accommodation = await _context.Accomodations
+                .FirstOrDefaultAsync(m => m.AccomodationId == id);
             if (accommodation == null)
             {
                 return NotFound();
@@ -65,14 +65,14 @@ namespace Bookings.Controllers
         }
 
         // GET: Accommodations/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null || _context.Accommodations == null)
+            if (id == null || _context.Accomodations == null)
             {
                 return NotFound();
             }
 
-            var accommodation = await _context.Accommodations.FindAsync(id);
+            var accommodation = await _context.Accomodations.FindAsync(id);
             if (accommodation == null)
             {
                 return NotFound();
@@ -85,9 +85,9 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("AccommodationId,StartDate,EndDate,Bookings,Location,Price,ImageId")] Accommodation accommodation)
+        public async Task<IActionResult> Edit(Guid id, [Bind("AccommodationId,StartDate,EndDate,Bookings,Location,Price,ImageId")] Accomodation accommodation)
         {
-            if (id != accommodation.AccommodationId)
+            if (id != accommodation.AccomodationId)
             {
                 return NotFound();
             }
@@ -101,7 +101,7 @@ namespace Bookings.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!AccommodationExists(accommodation.AccommodationId))
+                    if (!AccommodationExists(accommodation.AccomodationId))
                     {
                         return NotFound();
                     }
@@ -116,15 +116,15 @@ namespace Bookings.Controllers
         }
 
         // GET: Accommodations/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
-            if (id == null || _context.Accommodations == null)
+            if (id == null || _context.Accomodations == null)
             {
                 return NotFound();
             }
 
-            var accommodation = await _context.Accommodations
-                .FirstOrDefaultAsync(m => m.AccommodationId == id);
+            var accommodation = await _context.Accomodations
+                .FirstOrDefaultAsync(m => m.AccomodationId == id);
             if (accommodation == null)
             {
                 return NotFound();
@@ -136,25 +136,25 @@ namespace Bookings.Controllers
         // POST: Accommodations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            if (_context.Accommodations == null)
+            if (_context.Accomodations == null)
             {
                 return Problem("Entity set 'SystemTContext.Accommodations'  is null.");
             }
-            var accommodation = await _context.Accommodations.FindAsync(id);
+            var accommodation = await _context.Accomodations.FindAsync(id);
             if (accommodation != null)
             {
-                _context.Accommodations.Remove(accommodation);
+                _context.Accomodations.Remove(accommodation);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool AccommodationExists(int id)
+        private bool AccommodationExists(Guid id)
         {
-          return _context.Accommodations.Any(e => e.AccommodationId == id);
+          return _context.Accomodations.Any(e => e.AccomodationId == id);
         }
     }
 }

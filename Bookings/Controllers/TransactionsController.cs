@@ -25,7 +25,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transactions/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Transactions == null)
             {
@@ -65,7 +65,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transactions/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Transactions == null)
             {
@@ -85,7 +85,7 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TransactionId,Approved")] Transaction transaction)
+        public async Task<IActionResult> Edit(Guid id, [Bind("TransactionId,Approved")] Transaction transaction)
         {
             if (id != transaction.TransactionId)
             {
@@ -116,7 +116,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transactions/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Transactions == null)
             {
@@ -136,7 +136,7 @@ namespace Bookings.Controllers
         // POST: Transactions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Transactions == null)
             {
@@ -152,7 +152,7 @@ namespace Bookings.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TransactionExists(int id)
+        private bool TransactionExists(Guid id)
         {
           return _context.Transactions.Any(e => e.TransactionId == id);
         }

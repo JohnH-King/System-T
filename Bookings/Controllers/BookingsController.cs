@@ -25,7 +25,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Bookings/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Bookings == null)
             {
@@ -45,6 +45,7 @@ namespace Bookings.Controllers
         // GET: Bookings/Create
         public IActionResult Create()
         {
+            ViewData["DisasterId"] = new SelectList(_context.Flights, "FlightId", "DisasterLocation");
             return View();
         }
 
@@ -65,7 +66,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Bookings/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Bookings == null)
             {
@@ -85,7 +86,7 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("BookingId,FllightId,TransportId,AccomodationId,TransactionId,TransactionTotal")] Booking booking)
+        public async Task<IActionResult> Edit(Guid id, [Bind("BookingId,FllightId,TransportId,AccomodationId,TransactionId,TransactionTotal")] Booking booking)
         {
             if (id != booking.BookingId)
             {
@@ -116,7 +117,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Bookings/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Bookings == null)
             {
@@ -136,7 +137,7 @@ namespace Bookings.Controllers
         // POST: Bookings/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Bookings == null)
             {
@@ -152,7 +153,7 @@ namespace Bookings.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool BookingExists(int id)
+        private bool BookingExists(Guid id)
         {
           return _context.Bookings.Any(e => e.BookingId == id);
         }

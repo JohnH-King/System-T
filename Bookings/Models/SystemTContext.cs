@@ -16,7 +16,7 @@ namespace Bookings.Models
         {
         }
 
-        public virtual DbSet<Accommodation> Accommodations { get; set; } = null!;
+        public virtual DbSet<Accomodation> Accomodations { get; set; } = null!;
         public virtual DbSet<Booking> Bookings { get; set; } = null!;
         public virtual DbSet<Client> Clients { get; set; } = null!;
         public virtual DbSet<Flight> Flights { get; set; } = null!;
@@ -30,27 +30,21 @@ namespace Bookings.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=systemtise.csp1vikprmva.us-east-2.rds.amazonaws.com;Database=SystemT;User Id=admin;Password=SystemTTravel;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-P04GS2M\\SQLEXPRESS;Database=SystemT;User Id=ian;Password=6991;Trusted_Connection=False");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Accommodation>(entity =>
+            modelBuilder.Entity<Accomodation>(entity =>
             {
-                entity.ToTable("Accommodation");
+                entity.ToTable("Accomodation");
 
-                entity.Property(e => e.AccommodationId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Accommodation_ID");
+                entity.Property(e => e.AccomodationId).ValueGeneratedNever();
 
                 entity.Property(e => e.EndDate).HasColumnType("datetime");
 
-                entity.Property(e => e.ImageId).HasColumnName("image_ID");
-
-                entity.Property(e => e.Location)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.Location).HasMaxLength(30);
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
             });
@@ -59,138 +53,124 @@ namespace Bookings.Models
             {
                 entity.ToTable("Booking");
 
-                entity.Property(e => e.BookingId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Booking_ID");
+                entity.Property(e => e.BookingId).ValueGeneratedNever();
 
-                entity.Property(e => e.AccomodationId).HasColumnName("Accomodation_ID");
+                entity.HasOne(d => d.Accomodation)
+                    .WithMany(p => p.Bookings)
+                    .HasForeignKey(d => d.AccomodationId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Booking__Accomod__48CFD27E");
 
-                entity.Property(e => e.FllightId).HasColumnName("Fllight_ID");
+                entity.HasOne(d => d.Flight)
+                    .WithMany(p => p.Bookings)
+                    .HasForeignKey(d => d.FlightId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Booking__FlightI__49C3F6B7");
 
-                entity.Property(e => e.TransactionId).HasColumnName("Transaction_ID");
+                entity.HasOne(d => d.Transaction)
+                    .WithMany(p => p.Bookings)
+                    .HasForeignKey(d => d.TransactionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Booking__Transac__4AB81AF0");
 
-                entity.Property(e => e.TransactionTotal).HasColumnName("Transaction_Total");
-
-                entity.Property(e => e.TransportId).HasColumnName("Transport_ID");
+                entity.HasOne(d => d.Transport)
+                    .WithMany(p => p.Bookings)
+                    .HasForeignKey(d => d.TransportId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Booking__Transpo__47DBAE45");
             });
 
             modelBuilder.Entity<Client>(entity =>
             {
                 entity.ToTable("Client");
 
-                entity.Property(e => e.ClientId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Client_ID");
+                entity.Property(e => e.ClientId).ValueGeneratedNever();
 
-                entity.Property(e => e.CellNumber)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.CellNumber).HasMaxLength(5);
 
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(50)
-                    .IsFixedLength();
+                entity.Property(e => e.FirstName).HasMaxLength(30);
 
-                entity.Property(e => e.Lastname)
-                    .HasMaxLength(50)
-                    .IsFixedLength();
+                entity.Property(e => e.LastName).HasMaxLength(30);
+
+                entity.HasOne(d => d.ClientLogin)
+                    .WithMany(p => p.Clients)
+                    .HasForeignKey(d => d.ClientLoginId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Client__ClientLo__398D8EEE");
             });
 
             modelBuilder.Entity<Flight>(entity =>
             {
                 entity.ToTable("Flight");
 
-                entity.Property(e => e.FlightId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Flight_ID");
-
-                entity.Property(e => e.Cost)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.FlightId).ValueGeneratedNever();
 
                 entity.Property(e => e.DepartureDate).HasColumnType("datetime");
 
-                entity.Property(e => e.EndLocation)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
-
-                entity.Property(e => e.ImageId).HasColumnName("Image_ID");
+                entity.Property(e => e.EndLocation).HasMaxLength(30);
 
                 entity.Property(e => e.ReturnDate).HasColumnType("datetime");
 
-                entity.Property(e => e.StartLocation)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.StartLocation).HasMaxLength(30);
             });
 
             modelBuilder.Entity<Login>(entity =>
             {
-                entity.HasKey(e => e.ClientLoginId);
+                entity.HasKey(e => e.ClientLoginId)
+                    .HasName("PK__Login__64B6D3CEAE0CEB49");
 
                 entity.ToTable("Login");
 
-                entity.Property(e => e.ClientLoginId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("ClientLogin_ID");
+                entity.Property(e => e.ClientLoginId).ValueGeneratedNever();
 
-                entity.Property(e => e.Admin)
-                    .HasMaxLength(50)
-                    .IsFixedLength();
+                entity.Property(e => e.Email).HasMaxLength(30);
 
-                entity.Property(e => e.Email)
-                    .HasMaxLength(50)
-                    .IsFixedLength();
+                entity.Property(e => e.IsAdmin)
+                    .HasMaxLength(5)
+                    .HasColumnName("isAdmin");
 
-                entity.Property(e => e.Password)
-                    .HasMaxLength(50)
-                    .IsFixedLength();
+                entity.Property(e => e.Password).HasMaxLength(30);
             });
 
             modelBuilder.Entity<Transaction>(entity =>
             {
-                entity.ToTable("Transaction");
+                entity.Property(e => e.TransactionId).ValueGeneratedNever();
 
-                entity.Property(e => e.TransactionId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Transaction_ID");
+                entity.Property(e => e.Approved).HasColumnName("approved");
+
+                entity.HasOne(d => d.Client)
+                    .WithMany(p => p.Transactions)
+                    .HasForeignKey(d => d.ClientId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Transacti__Clien__3C69FB99");
             });
 
             modelBuilder.Entity<Transport>(entity =>
             {
                 entity.ToTable("Transport");
 
-                entity.Property(e => e.TransportId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("Transport_ID");
+                entity.Property(e => e.TransportId).ValueGeneratedNever();
 
-                entity.Property(e => e.BookingId).HasColumnName("Booking_ID");
+                entity.Property(e => e.EndLocation).HasMaxLength(30);
 
-                entity.Property(e => e.EndLocation)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.StartLocation).HasMaxLength(30);
 
-                entity.Property(e => e.ImageId)
-                    .HasMaxLength(10)
-                    .HasColumnName("Image_ID")
-                    .IsFixedLength();
-
-                entity.Property(e => e.StartLocation)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
-
-                entity.Property(e => e.TypeId).HasColumnName("Type_ID");
+                entity.HasOne(d => d.TransportType)
+                    .WithMany(p => p.Transports)
+                    .HasForeignKey(d => d.TransportTypeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Transport__Trans__44FF419A");
             });
 
             modelBuilder.Entity<TransportType>(entity =>
             {
                 entity.ToTable("TransportType");
 
-                entity.Property(e => e.TransportTypeId)
-                    .ValueGeneratedNever()
-                    .HasColumnName("TransportType_ID");
+                entity.Property(e => e.TransportTypeId).ValueGeneratedNever();
 
-                entity.Property(e => e.Description)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.Name).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

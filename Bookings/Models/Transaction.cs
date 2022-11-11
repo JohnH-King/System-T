@@ -5,7 +5,10 @@ namespace Bookings.Models
 {
     public partial class Transaction
     {
-        public int TransactionId { get; set; }
-        public bool? Approved { get; set; }
+        public Guid TransactionId { get; set; }
+        public bool Approved { get; set; }
+        public Guid ClientId { get; set; }
+
+        public virtual Client Client { get; set; } = null!;
     }
 }

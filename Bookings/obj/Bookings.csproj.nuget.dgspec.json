@@ -1,20 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "/Users/eduannaude/Documents/GitHub/System-T/Bookings/Bookings.csproj": {}
+    "C:\\Users\\masag\\Desktop\\System-T\\Bookings\\Bookings.csproj": {}
   },
   "projects": {
-    "/Users/eduannaude/Documents/GitHub/System-T/Bookings/Bookings.csproj": {
+    "C:\\Users\\masag\\Desktop\\System-T\\Bookings\\Bookings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/Bookings.csproj",
+        "projectUniqueName": "C:\\Users\\masag\\Desktop\\System-T\\Bookings\\Bookings.csproj",
         "projectName": "Bookings",
-        "projectPath": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/Bookings.csproj",
-        "packagesPath": "/Users/eduannaude/.nuget/packages/",
-        "outputPath": "/Users/eduannaude/Documents/GitHub/System-T/Bookings/obj/",
+        "projectPath": "C:\\Users\\masag\\Desktop\\System-T\\Bookings\\Bookings.csproj",
+        "packagesPath": "C:\\Users\\masag\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\masag\\Desktop\\System-T\\Bookings\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/eduannaude/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\masag\\Desktop\\System-T\\NuGet.Config",
+          "C:\\Users\\masag\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -80,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

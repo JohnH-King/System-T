@@ -25,7 +25,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Logins/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Logins == null)
             {
@@ -65,7 +65,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Logins/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Logins == null)
             {
@@ -85,7 +85,7 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ClientLoginId,Email,Password,Admin")] Login login)
+        public async Task<IActionResult> Edit(Guid id, [Bind("ClientLoginId,Email,Password,Admin")] Login login)
         {
             if (id != login.ClientLoginId)
             {
@@ -116,7 +116,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Logins/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Logins == null)
             {
@@ -136,7 +136,7 @@ namespace Bookings.Controllers
         // POST: Logins/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Logins == null)
             {
@@ -152,7 +152,7 @@ namespace Bookings.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool LoginExists(int id)
+        private bool LoginExists(Guid id)
         {
           return _context.Logins.Any(e => e.ClientLoginId == id);
         }

@@ -5,7 +5,17 @@ namespace Bookings.Models
 {
     public partial class TransportType
     {
-        public int TransportTypeId { get; set; }
-        public string? Description { get; set; }
+        public TransportType()
+        {
+            Bookings = new HashSet<Booking>();
+            Transports = new HashSet<Transport>();
+        }
+
+        public Guid TransportTypeId { get; set; }
+        public string Name { get; set; } = null!;
+        public string Description { get; set; } = null!;
+
+        public virtual ICollection<Booking> Bookings { get; set; }
+        public virtual ICollection<Transport> Transports { get; set; }
     }
 }

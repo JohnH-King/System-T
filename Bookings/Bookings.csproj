@@ -20,4 +20,8 @@
   <ItemGroup>
     <None Remove="MessagePackAnalyzer" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\BookingsV2\" />
+  </ItemGroup>
 </Project>

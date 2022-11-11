@@ -25,7 +25,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Flights/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Flights == null)
             {
@@ -65,7 +65,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Flights/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Flights == null)
             {
@@ -85,7 +85,7 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FlightId,OneWay,DepartureDate,ReturnDate,StartLocation,EndLocation,Cost,ImageId")] Flight flight)
+        public async Task<IActionResult> Edit(Guid id, [Bind("FlightId,OneWay,DepartureDate,ReturnDate,StartLocation,EndLocation,Cost,ImageId")] Flight flight)
         {
             if (id != flight.FlightId)
             {
@@ -116,7 +116,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Flights/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Flights == null)
             {
@@ -152,7 +152,7 @@ namespace Bookings.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool FlightExists(int id)
+        private bool FlightExists(Guid id)
         {
           return _context.Flights.Any(e => e.FlightId == id);
         }

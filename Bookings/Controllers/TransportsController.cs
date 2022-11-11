@@ -25,7 +25,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transports/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Transports == null)
             {
@@ -65,7 +65,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transports/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Transports == null)
             {
@@ -85,7 +85,7 @@ namespace Bookings.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TransportId,BookingId,TypeId,StartLocation,EndLocation,Cost,ImageId")] Transport transport)
+        public async Task<IActionResult> Edit(Guid id, [Bind("TransportId,BookingId,TypeId,StartLocation,EndLocation,Cost,ImageId")] Transport transport)
         {
             if (id != transport.TransportId)
             {
@@ -116,7 +116,7 @@ namespace Bookings.Controllers
         }
 
         // GET: Transports/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null || _context.Transports == null)
             {
@@ -136,7 +136,7 @@ namespace Bookings.Controllers
         // POST: Transports/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             if (_context.Transports == null)
             {
@@ -152,7 +152,7 @@ namespace Bookings.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool TransportExists(int id)
+        private bool TransportExists(Guid id)
         {
           return _context.Transports.Any(e => e.TransportId == id);
         }
