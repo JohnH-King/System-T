@@ -1,9 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Bookings</title>
+    <title>@ViewData["Title"] - Bookings_v2</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/LandingPage.css" asp-append-version="true" />
@@ -21,45 +25,52 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Bookings" asp-action="Index"><img src="https://drive.google.com/uc?export=view&id=1KSKwPjgQdLI-mfzM-4FAnyt7nv4sW4CZ" alt="Logo"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                
+                    <a class="navbar-brand" asp-area="" asp-controller="Bookings_v2" asp-action="Index"><img src="https://drive.google.com/uc?export=view&id=1KSKwPjgQdLI-mfzM-4FAnyt7nv4sW4CZ" alt="Logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Bookings" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item" >
-                            <div class="dropdown">
-                                <a class="nav-link text-light dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Bookings
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Flights" asp-action="Index">Flight</a>
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Accommodations" asp-action="Index">Accommodation</a>
-                                    <a class="nav-link text-light" asp-area="" asp-controller="Transports" asp-action="Index">Transport</a>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Clients" asp-action="Index">Client</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Transactions" asp-action="Index">Transaction</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="TransportTypes" asp-action="Index">TransportType</a>
-                        </li>
-@*                        <li class="account nav-item ">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Bookings" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item" >
+                                <div class="dropdown">
+                                    <a class="nav-link text-light dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Bookings_v2
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Flights" asp-action="Index">Flight</a>
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Accommodations" asp-action="Index">Accommodation</a>
+                                        <a class="nav-link text-light" asp-area="" asp-controller="Transports" asp-action="Index">Transport</a>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Clients" asp-action="Index">Client</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Transactions" asp-action="Index">Transaction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="TransportTypes" asp-action="Index">TransportType</a>
+                            </li>
+                            @*                        <li class="account nav-item ">
                             <a class="nav-link text-light" asp-area="" asp-controller="Logins" asp-action="Details" asp-route-id="1"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Account Settings</a>
                      </li>*@
-                    </ul>
+                        </ul>
+                        
+                    }
                     <partial name="_LoginPartial" />
-                </div>
+                    </div>
+                    
             </div>
         </nav>
+                    
     </header>
 
     <div id="preloader"></div>
@@ -80,7 +91,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Bookings - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Bookings_v2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
