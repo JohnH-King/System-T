@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zCdRoY3e+KpuhCZQbq/ywcJ4y2az8EaeW9hVDj4p8E8=",
+  "Hash": "WBRGwzNUE0ySa/arZe9CVGk4OCzTkkSEnwaI6KMEIEg=",
   "Source": "Bookings_v2",
   "BasePath": "_content/Bookings_v2",
   "Mode": "Default",
@@ -1190,6 +1190,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Bolt.png"
     },
     {
+      "Identity": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\Images\\Bolt1.png",
+      "SourceId": "Bookings_v2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\",
+      "BasePath": "_content/Bookings_v2",
+      "RelativePath": "Images/Bolt1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Bolt1.png"
+    },
+    {
       "Identity": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\Images\\Uber.png",
       "SourceId": "Bookings_v2",
       "SourceType": "Discovered",
@@ -1239,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Yookoo.png"
+    },
+    {
+      "Identity": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\Images\\Yookoo1.png",
+      "SourceId": "Bookings_v2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\",
+      "BasePath": "_content/Bookings_v2",
+      "RelativePath": "Images/Yookoo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Yookoo1.png"
     },
     {
       "Identity": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\wwwroot\\js\\site.js",
