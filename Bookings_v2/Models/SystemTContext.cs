@@ -53,6 +53,8 @@ namespace Bookings_v2.Models
                     .IsFixedLength();
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
+                entity.Property(e => e.UserId).HasColumnType("UserID");
+
             });
 
             modelBuilder.Entity<Booking>(entity =>
@@ -120,6 +122,8 @@ namespace Bookings_v2.Models
                 entity.Property(e => e.StartLocation)
                     .HasMaxLength(10)
                     .IsFixedLength();
+
+                entity.Property(e => e.UserId).HasColumnType("UserId");
             });
 
             modelBuilder.Entity<Login>(entity =>
@@ -176,6 +180,8 @@ namespace Bookings_v2.Models
                 entity.Property(e => e.StartLocation)
                     .HasMaxLength(10)
                     .IsFixedLength();
+
+                entity.Property(e => e.UserId).HasColumnType("UserId");
 
                 entity.Property(e => e.TypeId).HasColumnName("Type_ID");
             });

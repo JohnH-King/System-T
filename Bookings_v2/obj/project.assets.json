@@ -2461,11 +2461,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj",
+      "projectUniqueName": "E:\\coding stuff\\LOCAL\\System-T - Last\\Bookings_v2\\Bookings_v2.csproj",
       "projectName": "Bookings_v2",
-      "projectPath": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\Bookings_v2.csproj",
+      "projectPath": "E:\\coding stuff\\LOCAL\\System-T - Last\\Bookings_v2\\Bookings_v2.csproj",
       "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-      "outputPath": "E:\\coding stuff\\System-T Remastered\\Bookings_v2\\Bookings_v2\\obj\\",
+      "outputPath": "E:\\coding stuff\\LOCAL\\System-T - Last\\Bookings_v2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
