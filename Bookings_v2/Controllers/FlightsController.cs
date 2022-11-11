@@ -172,9 +172,33 @@ namespace Bookings.Controllers
                 flights = results.data;
             }
 
+            ViewBag.Results = flights;
 
+            return View();
+        }
 
-            return View(flights);
+        //Link controler to button
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateFromBtn(FlightBooking flightBooking)
+        {
+            Flight flight = new Flight();
+            flight.StartLocation = flightBooking.StartLocation;
+            flight.EndLocation = flightBooking.EndLocation;
+            flight.OneWay = flightBooking.OneWay;
+
+            flight.ReturnDate = DateTime.Parse(flightBooking.ReturnDate);
+            flight.DepartureDate = DateTime.Parse(flightBooking.DepartureDate);
+
+            if (ModelState.IsValid)
+            {
+                _context.Add(flight);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            //redirect na page van john
+            return View(flight);
         }
     }
 }

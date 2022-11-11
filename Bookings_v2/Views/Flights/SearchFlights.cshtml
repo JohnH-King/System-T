@@ -1,5 +1,4 @@
-﻿@model IEnumerable<Bookings.Models.FlightModels.FlightsOffers>
-
+﻿@model Bookings_v2.Models.FlightBooking
 @{
     ViewData["Title"] = "SearchFlights";
 }
@@ -10,71 +9,96 @@
     <a asp-action="Create">Create New</a>
 </p>
 
-
-@foreach (var item in Model)
+@if (ViewBag?.Results != null)
 {
-        <div class="row h-100 bg-opacity-25 shadow p-3 mb-5 rounded-3">
-            <div class="mb-2 col">
-                <div style="backdrop-filter: blur(10px);">
-                    <div class="card-body">
-                        <h5 class="card-title">Departure Journey | @item.itineraries[0].segments[0].departure.at.Substring(0,10)</h5>
-                        <div class="row align-items-center">
-                            <div class="col align-items-center">
-                                <div>
-                                    <label class="card-title">@item.itineraries[0].segments[0].departure.at.Substring(11,8)</label>
-                                </div>
+    @foreach (var item in ViewBag?.Results)
+    {
+        <form asp-action="CreateFromBtn">
+            <div class="row h-100 bg-opacity-25 shadow p-3 mb-5 rounded-3">
+                <div class="mb-2 col">
+                    <div style="backdrop-filter: blur(10px);">
+                        <div class="card-body">
+                            <h5 class="card-title">Departure Journey | @item.itineraries[0].segments[0].departure.at.Substring(0,10)</h5>
+                            <div class="row align-items-center">
+                                <div class="col align-items-center">
+                                    <div>
+                                        <label class="card-title">@item.itineraries[0].segments[0].departure.at.Substring(11,8)</label>
+                                    </div>
+                                    <input hidden asp-for="StartLocation" value="@item.itineraries[0].segments[0].departure.iataCode"/>
                                     <label class="card-title">@item.itineraries[0].segments[0].departure.iataCode</label>
-                            </div>
-                            <div class="col align-items-center">
-                                <div>
-                                    <label class="card-title">@item.itineraries[0].duration.Substring(2)</label>
                                 </div>
-                                <label class="card-title border-top">Stops: @item.itineraries[0].segments[0].numberOfStops</label>
-                            </div>
-                            <div class="col align-items-center">
-                                <div>
-                                    <label class="card-title">@item.itineraries[0].segments[0].arrival.at.Substring(11,8)</label>
+                                <div class="col align-items-center">
+                                    <div>
+                                        <label class="card-title">@item.itineraries[0].duration.Substring(2)</label>
+                                    </div>
+                                    <label  class="card-title border-top">Stops: @item.itineraries[0].segments[0].numberOfStops</label>
                                 </div>
-                                <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode</label>
+                                <div class="col align-items-center">
+                                    <div>
+                                        <label class="card-title">@item.itineraries[0].segments[0].arrival.at.Substring(11,8)</label>
+                                    </div>
+                                    <input hidden asp-for="EndLocation" value="@item.itineraries[1].segments[0].departure.iataCode"/>
+                                    <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="mb-2 col">
-                <div style="backdrop-filter: blur(10px);">
-                    <div class="card-body">
-                        <h5 class="card-title" >Return Journey | @item.itineraries[1].segments[0].departure.at.Substring(0,10)</h5>
-                        <div class="row align-items-center">
-                            <div class="col align-items-center">
-                                <div>
-                                    <label class="card-title">@item.itineraries[1].segments[0].departure.at.Substring(11,8) </label>
+                <div class="mb-2 col">
+                    <div style="backdrop-filter: blur(10px);">
+                        <div class="card-body">
+                            <h5 class="card-title" >Return Journey | @item.itineraries[1].segments[0].departure.at.Substring(0,10)</h5>
+                            <div class="row align-items-center">
+                                <div class="col align-items-center">
+                                    <div>
+                                        <label class="card-title">@item.itineraries[1].segments[0].departure.at.Substring(11,8) </label>
+                                    </div>
+                                    <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode </label>
                                 </div>
-                                <label class="card-title">@item.itineraries[1].segments[0].departure.iataCode </label>
-                            </div>
-                            <div class="col flex-column">
-                                <div class="align-items-center">
-                                    <label class="card-title">@item.itineraries[1].duration.Substring(2)</label>
+                                <div class="col flex-column">
+                                    <div class="align-items-center">
+                                        <label class="card-title">@item.itineraries[1].duration.Substring(2)</label>
+                                    </div>
+                                    <div class="align-items-center">
+                                        <label class="card-title border-top">Stops: @item.itineraries[1].segments[0].numberOfStops</label>
+                                    </div>
                                 </div>
-                                <div class="align-items-center">
-                                    <label class="card-title border-top">Stops: @item.itineraries[1].segments[0].numberOfStops</label>
+                                <div class="col flex-column">
+                                    <div class="align-items-center">
+                                        <label class="card-title">@item.itineraries[1].segments[0].arrival.at.Substring(11,8)</label>
+                                    </div>
+                                    <div class="align-items-center">
+                                        <label class="card-title">@item.itineraries[0].segments[0].departure.iataCode</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col flex-column">
-                                <div class="align-items-center">
-                                    <label class="card-title">@item.itineraries[1].segments[0].arrival.at.Substring(11,8)</label>
-                                </div>
-                                <div class="align-items-center">
-                                    <label class="card-title">@item.itineraries[0].segments[0].departure.iataCode</label>
-                                </div>
-                            </div>
-                        </div> 
+                            </div> 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <h5 class="card-title">TOTAL PRICE : R @item.price.total</h5>
-            <button type="submit" class="btn btn-primary w-25">Book now</button>
-        </div>
+                @{
+                    double value = double.Parse(item.price.total.Substring(0, (item.price.total.Length - 3)));
+                    double final = value * 20;
+                    string totalstr = final.ToString();
+                    bool oneWay;
 
-                    
+                    if (item.itineraries[1].segments[0].numberOfStops > 0)
+                    {
+                        oneWay = false;
+                    }
+                    else 
+                    {
+                        oneWay = true;
+                    }
+
+                    DateTime departDate = DateTime.ParseExact("2012-04-05", "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+                }
+                <input hidden asp-for="DepartureDate" value="@item.itineraries[0].segments[0].departure.at.Substring(0,10)" />
+                <input hidden asp-for="ReturnDate" value="@item.itineraries[1].segments[0].departure.at.Substring(0,10)" />
+                <input hidden asp-for="OneWay" value="@oneWay"/>
+                <input hidden asp-for="Cost" Cost"" value="@totalstr" />
+                <label class="card-title">TOTAL PRICE : R @totalstr</label>
+                <button type="submit" class="btn btn-primary w-25">Book now</button>
+            </div>
+        </form>
+    }
 }

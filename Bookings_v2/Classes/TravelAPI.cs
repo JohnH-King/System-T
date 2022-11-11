@@ -65,6 +65,22 @@ namespace Bookings.Classes
             http.DefaultRequestHeaders.Add("Authorization", $"Bearer {bearerToken}");
         }
 
+
+        public async Task<FlightPackages> SearchHotel(String cityCode)
+        {
+            string ste = "/v1/reference-data/locations/hotels/by-city?radius=20&radiusUnit=KM&amenities&ratings&hotelSource=ALL&cityCode="+cityCode;
+
+            var message = new HttpRequestMessage(HttpMethod.Get, ste);
+
+            ConfigBearerTokenHeader();
+            var response = await http.SendAsync(message);
+            using var stream = await response.Content.ReadAsStreamAsync();
+            FlightPackages second = await JsonSerializer.DeserializeAsync<FlightPackages>(stream);
+            return second;
+
+
+        }
+
     }
 }
 
