@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj": {}
+    "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj": {}
   },
   "projects": {
-    "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj": {
+    "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj",
+        "projectUniqueName": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj",
         "projectName": "Bookings_v2",
-        "projectPath": "C:\\FrontEnd development\\System-T\\Bookings_v2\\Bookings_v2.csproj",
-        "packagesPath": "C:\\Users\\humai\\.nuget\\packages\\",
-        "outputPath": "C:\\FrontEnd development\\System-T\\Bookings_v2\\obj\\",
+        "projectPath": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\Bookings_v2.csproj",
+        "packagesPath": "C:\\Users\\janco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janco\\Desktop\\Project\\System-T\\Bookings_v2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\humai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\janco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,10 +59,6 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.10, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[6.0.10, )"
             }
           },
           "imports": [
@@ -84,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
